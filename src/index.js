@@ -3,6 +3,7 @@ import './css/styles.css';
 const axios = require('axios').default;
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import getImage from './getImages';
 
 // ------------------DOM Elements---------------------
 
@@ -62,19 +63,19 @@ function onFormEl(event) {
 
 // ---------------------------HTTP request---------------------
 
-function getImage(searchQuery, page, perPage) {
-  return axios
-    .get(
-      `https://pixabay.com/api/?key=32028713-8f4458935a933d773f83236cb&q=${searchQuery}&image_type=photoo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`
-    )
-    .then(responce => {
-      // console.log(responce);
-      return responce;
-    })
-    .catch(error => {
-      console.log('ERROR: ' + error);
-    });
-}
+// function getImage(searchQuery, page, perPage) {
+//   return axios
+//     .get(
+//       `https://pixabay.com/api/?key=32028713-8f4458935a933d773f83236cb&q=${searchQuery}&image_type=photoo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`
+//     )
+//     .then(responce => {
+//       // console.log(responce);
+//       return responce;
+//     })
+//     .catch(error => {
+//       console.log('ERROR: ' + error);
+//     });
+// }
 
 // function getImage(searchQuery, page, perPage) {
 //   return axios
