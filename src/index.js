@@ -70,6 +70,9 @@ function getImage(searchQuery, page, perPage) {
     .then(responce => {
       // console.log(responce);
       return responce;
+    })
+    .catch(error => {
+      console.log('ERROR: ' + error);
     });
 }
 
