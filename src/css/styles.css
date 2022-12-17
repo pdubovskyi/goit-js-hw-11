@@ -1,32 +1,60 @@
-* {
-  box-sizing: border-box;
+.gallery {
+  position: relative;
+  top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
-  line-height: 1.5;
+.photo-card {
+  margin: 10px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-ul {
-  list-style: none;
+img {
+  display: block;
+  width: 360px;
+  height: 240px;
+
+  object-fit: cover;
+  overflow: hidden;
 }
 
-ul li {
-  margin-bottom: 5px;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-#search-box {
-  font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 0 0 5px 5px;
 }
 
-.name {
-  display: inline;
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 5px;
+  border-radius: 7px;
+
+  background-color: rgb(248, 165, 40);
+
+  cursor: pointer;
+}
+
+.load-more {
+  position: fixed;
+  top: 9px;
+  left: 280px;
+  /* right: 120px; */
+  /* margin-top: 20px; */
+  margin-right: auto;
+  margin-left: auto;
 }
